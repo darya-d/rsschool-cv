@@ -49,6 +49,7 @@ var onChangeSizeImg = function (evt) {
  
 imgSizeValueFieldset.addEventListener('click', onChangeSizeImg);
 ```
+To see more you can visit my [Github page](https://github.com/darya-d).
  
 ## 🇬🇧 English
 In 2016 I had passed the Streamline School's exam and got certificates for the B1-B2 level. Since then I’ve been using English only while travelling in Europe, practicing in Lingualeo app and watching Netflix 😉
