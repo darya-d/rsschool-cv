@@ -39,22 +39,40 @@ Here are my study projects for HTML Academy intensives:
  
 
 ## 💻 Code example
-```
-var onChangeSizeImg = function (evt) {
-   var imgPreviewSizeValue = parseInt(scaleValue.value, 10);
-   if ((evt.target.classList.contains('scale__control--bigger')
-   && imgPreviewSizeValue < ScaleValue.MAX)) {
-     scaleValue.value = imgPreviewSizeValue + ScaleValue.STEP + '%';
-     imgPreviewSizeValue += ScaleValue.STEP;
-     zoomImg(imgPreviewSizeValue);
-   } else if ((evt.target.classList.contains('scale__control--smaller')
-   && imgPreviewSizeValue > ScaleValue.MIN)) {
-     scaleValue.value = imgPreviewSizeValue - ScaleValue.STEP + '%';
-     imgPreviewSizeValue -= ScaleValue.STEP;
-     zoomImg(imgPreviewSizeValue);
-   }
- 
-imgSizeValueFieldset.addEventListener('click', onChangeSizeImg);
+```Javascript
+var ScaleValue = {
+  DEFAULT: 100,
+  MIN: 25,
+  MAX: 100,
+  STEP: 25
+};
+
+var imgPreviewSizeFieldset = document.querySelector('.img-upload__scale');
+var scaleValue = document.querySelector('.scale__control--value');
+var imgPreview = window.form.imgPreview;
+
+// Function that change the scale of the image
+var zoomImg = function (sizeValue) {
+  imgPreview.style.transform = 'scale(' + sizeValue / 100 + ')';
+};
+
+// Function that change the value of the .scale__control - value field
+var onChangeSizeImgPreview = function (evt) {
+  var sizeValue = parseInt(scaleValue.value, 10);
+  if ((evt.target.classList.contains('scale__control--bigger') 
+  && sizeValue < ScaleValue.MAX)) {
+    scaleValue.value = sizeValue + ScaleValue.STEP + '%';
+    sizeValue += ScaleValue.STEP;
+    zoomImg(sizeValue);
+  } else if ((evt.target.classList.contains('scale__control--smaller') 
+    && sizeValue > ScaleValue.MIN)) {
+    scaleValue.value = sizeValue - ScaleValue.STEP + '%';
+    sizeValue -= ScaleValue.STEP;
+    zoomImg(sizeValue);
+  }
+};
+
+imgPreviewSizeFieldset.addEventListener('click', onChangeSizeImgPreview);
 ```
 To see more you can visit my [Github page](https://github.com/darya-d).
  
