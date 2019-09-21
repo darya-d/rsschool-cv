@@ -79,6 +79,47 @@
           </ul>
         </section>
 
+        <!-- Code example -->
+        <section class="section code">
+          <h2 class="title">Code example</h2>
+          <pre class="code__example">
+var ScaleValue = {
+  DEFAULT: 100,
+  MIN: 25,
+  MAX: 100,
+  STEP: 25
+};
+
+var imgPreviewSizeFieldset = document.querySelector('.img-upload__scale');
+var scaleValue = document.querySelector('.scale__control--value');
+var imgPreview = window.form.imgPreview;
+
+// Function that change the scale of the image
+var zoomImg = function (sizeValue) {
+  imgPreview.style.transform = 'scale(' + sizeValue / 100 + ')';
+};
+
+// Function that change the value of the .scale__control - value field
+var onChangeSizeImgPreview = function (evt) {
+  var sizeValue = parseInt(scaleValue.value, 10);
+  if ((evt.target.classList.contains('scale__control--bigger') 
+  && sizeValue < ScaleValue.MAX)) {
+    scaleValue.value = sizeValue + ScaleValue.STEP + '%';
+    sizeValue += ScaleValue.STEP;
+    zoomImg(sizeValue);
+  } else if ((evt.target.classList.contains('scale__control--smaller') 
+    && sizeValue > ScaleValue.MIN)) {
+    scaleValue.value = sizeValue - ScaleValue.STEP + '%';
+    sizeValue -= ScaleValue.STEP;
+    zoomImg(sizeValue);
+  }
+};
+
+imgPreviewSizeFieldset.addEventListener('click', onChangeSizeImgPreview);
+					</pre>
+          <p class="description">You can visit my <a href="https://github.com/darya-d?tab=repositories">GitHub page</a> to see more.</p>
+        </section>
+
         <!-- English (what kind of practice you had, how long it lasted and so on) -->
         <section class="section english">
           <h2 class="title">English</h2>
