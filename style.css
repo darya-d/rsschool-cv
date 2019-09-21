@@ -51,3 +51,112 @@ a:hover {
   
     list-style: none;
   }
+
+.wrapper {
+    max-width: 728px;
+    padding: 30px 30px;
+    margin: 0 auto;
+
+    border-radius: 10px;
+    background-color: #2C2C2B;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+    border-bottom: 2px solid #8BE786;
+}
+
+/* Contacts */
+.contacts__avatar {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    border-radius: 100%;
+}
+
+.contacts__fullname {
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1;
+
+    margin-bottom: 5px;
+
+    color: #72c26e;
+}
+
+.contacts__vacancy {
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+.contacts__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contacts__item:not(:last-child) {
+    margin-right: 10px;    
+}
+
+.contacts__link {    
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    margin-right: 12px;
+}
+
+.contacts__link::before {
+    content: " ";
+
+    display: block;
+    margin: 0 auto;
+}
+
+.contacts__item--tel .contacts__link::before {
+    width: 20px;
+    height: 20px;
+
+    background: url("./img/phone.svg") center no-repeat;
+}
+
+.contacts__item--email .contacts__link::before {
+    width: 20px;
+    height: 20px;
+
+    background: url("./img/gmail.svg") center no-repeat;
+}
+
+.contacts__item--tg .contacts__link::before {
+    width: 20px;
+    height: 20px;
+
+    background: url("./img/telegram.svg") center no-repeat;
+}
+
+/* Code example */
+.code__example {
+    font-size: 14px;
+
+    padding: 10px 20px;
+
+    color: rgb(245, 240, 240);
+    background-color: #363636;
+}
+
+.description {
+    text-indent: 20px;
+}
+
