@@ -1,0 +1,53 @@
+/* General */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: Helvetica, Arial, sans-serif;
+
+    color: #dbdbd7;
+    background-color: #242424;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+
+    color: #dbdbd7;
+}
+
+a:hover {
+    color: #8BE786;
+}
+
+.visually-hidden {
+    position: absolute;
+  
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+  
+    white-space: nowrap;
+    border: 0;
+  
+    clip-path: inset(100%);
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+.reset-list {
+    padding: 0;
+    margin: 0;
+  
+    list-style: none;
+  }
